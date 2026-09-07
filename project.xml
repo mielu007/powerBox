@@ -1,50 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="PowerBoxUI" version="1.0">
+<project>
+    <folders>
+        <!-- LVGL's built-in widgets are loaded automatically, no external
+             component libraries are needed for this project -->
+    </folders>
 
-  <display
-    name="round_240"
-    width="240"
-    height="240"
-    radius="120"
-    bg_color="0x121619"
-  />
-
-  <!-- ========================= -->
-  <!-- TILE 0 — PRZEKAZNIKI      -->
-  <!-- ========================= -->
-  <screen name="tile_main">
-
-    <label
-      text="PRZEKAZNIKI"
-      x="120" y="18"
-      align="center"
-      color="0x00FFC0"
-      font="montserrat_14"
-    />
-
-    <component ref="switch_card" x="20"  y="38" title="LODOWKA" icon="POWER"/>
-    <component ref="switch_card" x="124" y="38" title="USB-C"   icon="USB"/>
-    <component ref="switch_card" x="20"  y="84" title="USB-A"   icon="CHARGE"/>
-    <component ref="switch_card" x="124" y="84" title="INWERTER" icon="SETTINGS"/>
-
-    <button name="btn_autostart" x="35" y="142" w="170" h="32" radius="16"
-            border_color="0x00FFC0">
-      <label text="AUTO START" x="10" y="8" color="0xFFFFFF"/>
-      <label text=">" align="right" color="0x00FFC0"/>
-    </button>
-
-  </screen>
-
-  <!-- ========================= -->
-  <!-- KOMPONENTY                -->
-  <!-- ========================= -->
-  <component name="switch_card" w="96" h="42" radius="10"
-             bg_color="0x1D232A" border_color="0x2C353F">
-    <label name="title" x="48" y="4" color="0xFFFFFF" font="montserrat_14"/>
-    <label name="icon"  x="6"  y="18" color="0x00FFC0" font="montserrat_14"/>
-    <switch name="sw" x="60" y="22" w="32" h="16"
-            checked_color="0x00FFC0"
-            unchecked_color="0x3A444E"/>
-  </component>
-
+    <targets>
+        <target name="round_240">
+            <display width="240" height="240" color_format="RGB565"/>
+        </target>
+    </targets>
 </project>

@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globals>
-  <fonts>
-    <font name="montserrat_14"/>
-    <font name="montserrat_28"/>
-  </fonts>
 
-  <colors>
-    <color name="accent" value="0x00FFC0"/>
-    <color name="bg" value="0x121619"/>
-    <color name="card_bg" value="0x1D232A"/>
-    <color name="white" value="0xFFFFFF"/>
-    <color name="muted" value="0x9EA9B4"/>
-  </colors>
+    <consts>
+        <color name="accent"    value="0x00FFC0"/>
+        <color name="bg"        value="0x121619"/>
+        <color name="card_bg"   value="0x1D232A"/>
+        <color name="border"    value="0x2C353F"/>
+        <color name="white"     value="0xFFFFFF"/>
+        <color name="muted"     value="0x9EA9B4"/>
+    </consts>
+
+    <!--
+        montserrat_14 / montserrat_28 are LVGL's built-in fonts and are
+        already registered by the Editor - no <fonts> entry is needed
+        here unless you replace them with a custom TTF.
+    -->
+
+    <styles>
+        <style name="card"
+               bg_color="#card_bg"
+               border_color="#border"
+               border_width="1"
+               radius="10"/>
+    </styles>
+
 </globals>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+    <view style_bg_color="#bg">
+
+        <lv_label text="PRZEKAZNIKI" align="top_mid" y="18"
+                  style_text_color="#accent" style_text_font="montserrat_14"/>
+
+        <switch_card title="LODOWKA"  icon_text="PWR" x="20"  y="38"/>
+        <switch_card title="USB-C"    icon_text="USB" x="124" y="38"/>
+        <switch_card title="USB-A"    icon_text="CHG" x="20"  y="84"/>
+        <switch_card title="INWERTER" icon_text="CFG" x="124" y="84"/>
+
+        <lv_button name="btn_autostart" width="170" height="32" x="35" y="142"
+                   style_radius="16" style_border_color="#accent" style_border_width="1"
+                   style_bg_color="#card_bg">
+            <lv_label text="AUTO START" align="left_mid" x="10" style_text_color="#white"/>
+            <lv_label text=">" align="right_mid" x="-8" style_text_color="#accent"/>
+            <screen_load_event screen="tile_autostart" trigger="clicked" anim_type="move_left"/>
+        </lv_button>
+
+        <lv_button name="btn_bms" width="170" height="28" x="35" y="182"
+                   style_radius="14" style_border_color="#accent" style_border_width="1"
+                   style_bg_color="#card_bg">
+            <lv_label text="BMS NAPIĘCIA" align="center" style_text_color="#white"/>
+            <screen_load_event screen="tile_bms" trigger="clicked" anim_type="move_left"/>
+        </lv_button>
+
+        <lv_button name="btn_save" width="130" height="30" x="55" y="214"
+                   style_radius="15" style_border_color="#accent" style_border_width="2"
+                   style_bg_color="#card_bg">
+            <lv_label text="OK" align="left_mid" x="12" style_text_color="#accent"/>
+            <lv_label text="ZAPISZ" align="left_mid" x="34" style_text_color="#white"/>
+        </lv_button>
+
+    </view>
+</screen>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+
+    <api>
+        <prop name="cell_name" type="string" default="1"/>
+        <prop name="voltage"   type="string" default="0.00 V"/>
+    </api>
+
+    <view extends="lv_obj" width="96" height="42">
+        <style name="card"/>
+
+        <lv_obj name="reflection" width="100%" height="2" align="top_mid"
+                style_bg_color="#white" style_bg_opa="25" style_radius="10"/>
+
+        <lv_label name="lbl_name" text="$cell_name" align="top_mid" y="6"
+                  style_text_color="#white" style_text_font="montserrat_14"/>
+
+        <lv_label name="lbl_voltage" text="$voltage" align="bottom_mid" y="-7"
+                  style_text_color="#accent" style_text_font="montserrat_14"/>
+    </view>
+
+</component>
