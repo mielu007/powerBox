@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="PowerBoxUI" version="1.0">
+
+  <!-- ========================= -->
+  <!-- DEFINICJA WYŚWIETLACZA    -->
+  <!-- ========================= -->
+  <display
+    name="round_240"
+    width="240"
+    height="240"
+    radius="120"
+    bg_color="0x121619"
+    default="true"
+  />
+
+  <!-- ========================= -->
+  <!-- GLOBALNE FONTY            -->
+  <!-- ========================= -->
+  <fonts>
+    <font name="montserrat_14"/>
+    <font name="montserrat_18"/>
+    <font name="montserrat_28"/>
+  </fonts>
+
+  <!-- ========================= -->
+  <!-- GLOBALNE KOLORY           -->
+  <!-- ========================= -->
+  <colors>
+    <color name="bg" value="0x121619"/>
+    <color name="card_bg" value="0x1D232A"/>
+    <color name="accent" value="0x00FFC0"/>
+    <color name="white" value="0xFFFFFF"/>
+    <color name="muted" value="0x9EA9B4"/>
+  </colors>
+
+  <!-- ========================= -->
+  <!-- GLOBALNE STYLE            -->
+  <!-- ========================= -->
+  <styles>
+    <style name="card">
+      <bg_color value="0x1D232A"/>
+      <bg_opa value="255"/>
+      <radius value="10"/>
+      <border_width value="1"/>
+      <border_color value="0x2C353F"/>
+      <shadow_width value="12"/>
+      <shadow_color value="0x00FFC0"/>
+      <shadow_opa value="50"/>
+      <shadow_ofs_y value="4"/>
+    </style>
+  </styles>
+
+  <!-- ========================= -->
+  <!-- LISTA EKRANÓW             -->
+  <!-- ========================= -->
+  <screens>
+
+    <!-- Ekran główny -->
+    <screen
+      name="tile_main"
+      src="power_box.xml"
+      display="round_240"
+    />
+
+    <!-- Auto Start -->
+    <screen
+      name="tile_autostart"
+      src="power_box.xml"
+      display="round_240"
+    />
+
+    <!-- BMS -->
+    <screen
+      name="tile_bms"
+      src="power_box.xml"
+      display="round_240"
+    />
+
+  </screens>
+
+  <!-- ========================= -->
+  <!-- KOMPONENTY                -->
+  <!-- ========================= -->
+  <components>
+
+    <!-- Karta przełącznika -->
+    <component name="switch_card" src="power_box.xml"/>
+
+    <!-- Karta BMS -->
+    <component name="bms_cell" src="power_box.xml"/>
+
+  </components>
+
+</project>
