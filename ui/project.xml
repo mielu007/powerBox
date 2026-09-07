@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="PowerBoxUI" version="1.0">
+
+  <!-- Definicja wyświetlacza GC9A01 -->
+  <display
+    name="round_240"
+    width="240"
+    height="240"
+    radius="120"
+    bg_color="0x121619"
+  />
+
+  <!-- Lista ekranów (tileview w C++) -->
+  <screens>
+    <screen src="power_box.xml" name="tile_main"/>
+    <screen src="power_box.xml" name="tile_autostart"/>
+    <screen src="power_box.xml" name="tile_bms"/>
+  </screens>
+
+</project>
