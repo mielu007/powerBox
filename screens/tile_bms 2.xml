@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+    <view style_bg_color="#bg">
+
+        <lv_label text="BMS NAPIĘCIA" align="top_mid" y="18"
+                  style_text_color="#accent" style_text_font="montserrat_14"/>
+
+        <lv_label text="13.08 V" align="top_mid" y="38"
+                  style_text_color="#white" style_text_font="montserrat_28"/>
+
+        <lv_label text="RÓŻNICA: 0.08 V" align="top_mid" y="76"
+                  style_text_color="#muted" style_text_font="montserrat_14"/>
+
+        <bms_cell cell_name="1" voltage="3.23 V" x="20"  y="98"/>
+        <bms_cell cell_name="2" voltage="3.28 V" x="124" y="98"/>
+        <bms_cell cell_name="3" voltage="3.31 V" x="20"  y="148"/>
+        <bms_cell cell_name="4" voltage="3.26 V" x="124" y="148"/>
+
+        <lv_button name="btn_bms_back" width="100" height="28" align="bottom_mid" y="-18"
+                   style_radius="14" style_border_color="#accent" style_border_width="1"
+                   style_bg_color="#card_bg">
+            <lv_label text="&lt; WRT" align="center" style_text_color="#white"/>
+            <screen_load_event screen="tile_main" trigger="clicked" anim_type="move_right"/>
+        </lv_button>
+
+    </view>
+</screen>
