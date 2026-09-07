@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="PowerBoxUI" version="1.0">
+
+  <!-- Podgląd okrągłego ekranu GC9A01 -->
+  <display
+    name="round_240"
+    width="240"
+    height="240"
+    radius="120"
+    bg_color="0x121619"
+  />
+
+  <!-- ========================= -->
+  <!-- TILE 0 — PRZEKAZNIKI      -->
+  <!-- ========================= -->
+  <screen name="tile_main">
+
+    <label
+      text="PRZEKAZNIKI"
+      x="120" y="18"
+      align="center"
+      color="0x00FFC0"
+      font="montserrat_14"
+    />
+
+    <component ref="switch_card" x="20"  y="38"  title="LODOWKA" icon="POWER"/>
+    <component ref="switch_card" x="124" y="38"  title="USB-C"   icon="USB"/>
+    <component ref="switch_card" x="20"  y="84"  title="USB-A"   icon="CHARGE"/>
+    <component ref="switch_card" x="124" y="84"  title="INWERTER" icon="SETTINGS"/>
+
+    <button name="btn_autostart" x="35" y="142" w="170" h="32" radius="16" border_color="0x00FFC0">
+      <label text="AUTO START" x="10" y="8" color="0xFFFFFF"/>
+      <label text=">" align="right" color="0x00FFC0"/>
+    </button>
+
+    <button name="btn_bms" x="35" y="182" w="170" h="28" radius="14" border_color="0x00FFC0">
+      <label text="BMS NAPIĘCIA" align="center" color="0xFFFFFF"/>
+    </button>
+
+    <button name="btn_save" x="55" y="214" w="130" h="30" radius="15" border_color="0x00FFC0">
+      <label text="OK" x="12" y="8" color="0x00FFC0"/>
+      <label text="ZAPISZ" x="34" y="8" color="0xFFFFFF"/>
+    </button>
+
+  </screen>
+
+  <!-- ========================= -->
+  <!-- TILE 1 — AUTO START       -->
+  <!-- ========================= -->
+  <screen name="tile_autostart">
+
+    <label
+      text="AUTO START"
+      x="120" y="18"
+      align="center"
+      color="0x00FFC0"
+      font="montserrat_14"
+    />
+
+    <component ref="switch_card" x="20"  y="38"  title="LODOWKA" icon="POWER"/>
+    <component ref="switch_card" x="124" y="38"  title="USB-C"   icon="USB"/>
+    <component ref="switch_card" x="20"  y="84"  title="USB-A"   icon="CHARGE"/>
+    <component ref="switch_card" x="124" y="84"  title="INWERTER" icon="SETTINGS"/>
+
+    <label
+      name="lbl_delay"
+      text="ZWLOCA: 5 s"
+      x="120" y="120"
+      align="center"
+      color="0x00FFC0"
+      font="montserrat_14"
+    />
+
+    <slider
+      name="slider_delay"
+      x="45" y="144"
+      w="150" h="10"
+      min="1" max="30"
+      value="5"
+      indicator_color="0x00FFC0"
+      knob_color="0x00FFC0"
+    />
+
+    <button name="btn_back" x="70" y="200" w="100" h="28" radius="14" border_color="0x00FFC0">
+      <label text="< WRT" align="center" color="0xFFFFFF"/>
+    </button>
+
+  </screen>
+
+  <!-- ========================= -->
+  <!-- TILE 2 — BMS NAPIĘCIA    -->
+  <!-- ========================= -->
+  <screen name="tile_bms">
+
+    <label
+      text="BMS NAPIĘCIA"
+      x="120" y="18"
+      align="center"
+      color="0x00FFC0"
+      font="montserrat_14"
+    />
+
+    <label
+      text="13.08 V"
+      x="120" y="38"
+      align="center"
+      color="0xFFFFFF"
+      font="montserrat_28"
+    />
+
+    <label
+      text="RÓŻNICA: 0.08 V"
+      x="120" y="76"
+      align="center"
+      color="0x9EA9B4"
+      font="montserrat_14"
+    />
+
+    <component ref="bms_cell" x="20"  y="98"  cell="1" voltage="3.23"/>
+    <component ref="bms_cell" x="124" y="98"  cell="2" voltage="3.28"/>
+    <component ref="bms_cell" x="20"  y="148" cell="3" voltage="3.31"/>
+    <component ref="bms_cell" x="124" y="148" cell="4" voltage="3.26"/>
+
+    <button name="btn_bms_back" x="70" y="200" w="100" h="28" radius="14" border_color="0x00FFC0">
+      <label text="< WRT" align="center" color="0xFFFFFF"/>
+    </button>
+
+  </screen>
+
+  <!-- ========================= -->
+  <!-- KOMPONENTY WSPÓLNE       -->
+  <!-- ========================= -->
+
+  <component name="switch_card" w="96" h="42" radius="10" bg_color="0x1D232A" border_color="0x2C353F">
+    <label name="title" x="48" y="4" color="0xFFFFFF" font="montserrat_14"/>
+    <label name="icon"  x="6"  y="18" color="0x00FFC0" font="montserrat_14"/>
+    <switch name="sw" x="60" y="22" w="32" h="16" checked_color="0x00FFC0" unchecked_color="0x3A444E"/>
+  </component>
+
+  <component name="bms_cell" w="96" h="42" radius="10" bg_color="0x1D232A" border_color="0x2C353F">
+    <label name="cell"   x="48" y="6"  color="0xFFFFFF" font="montserrat_14"/>
+    <label name="voltage" x="48" y="26" color="0x00FFC0" font="montserrat_14"/>
+  </component>
+
+</project>
